@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 350 100% 98%;
+    --foreground: 340 30% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 18%;
+
+    --primary: 340 78% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 60% 96%;
+    --secondary-foreground: 340 60% 30%;
+
+    --muted: 340 30% 96%;
+    --muted-foreground: 340 10% 45%;
+
+    --accent: 340 80% 95%;
+    --accent-foreground: 340 60% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 50% 92%;
+    --input: 340 50% 92%;
+    --ring: 340 78% 64%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html,
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  body {
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(255, 192, 213, 0.55), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(255, 215, 230, 0.5), transparent 60%),
+      radial-gradient(800px 600px at 50% 110%, rgba(255, 224, 235, 0.5), transparent 60%),
+      linear-gradient(180deg, #fff7fa 0%, #fff0f5 100%);
+    min-height: 100vh;
+  }
+}
+
+.message-bubble {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: hsl(var(--primary));
+  margin: 0 2px;
+  animation: typing 1.2s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
