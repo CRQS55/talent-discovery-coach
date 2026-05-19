@@ -1,3 +1,6 @@
+ http://talent-discovery-coach-crqs.chat（中国注册域名）
+ https://talent-discovery-coach.vercel.app/（海外注册域名）
+ 点击链接立即体验
 # 潜能挖掘师 · Talent Discovery Coach (talent-discovery-coach-byCRQS)
 
 通过 8–15 个深度提问，帮你发现那些"你以为很普通、其实别人很难做到、且能跨界迁移"的隐藏天赋。
